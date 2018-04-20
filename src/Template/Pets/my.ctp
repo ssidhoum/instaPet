@@ -44,16 +44,16 @@
                         <td><?= h($pet->name)  ?></td>
                         <td>
                             <?php
-                            $birthday = new DateTime($pet['Pet']['birthday']);
+                            $birthday = new DateTime(h($pet->birthday));
                             echo $birthday->diff(new DateTime('now'))->y
                             ?> Ans
                         </td>
                         <td>
-                        <?= $this->Html->link('Voir les photos', array('controller' => 'posts', 'action' => 'pet', $pet['Pet']['id'])); ?>
+                        <?= $this->Html->link('Voir les photos', array('controller' => 'posts', 'action' => 'pet', $pet->id)); ?>
                         -
-                        <?= $this->Html->link('Editer', array('action' => 'edit', $pet['Pet']['id'])); ?>
+                        <?= $this->Html->link('Editer', array('action' => 'edit', $pet->id)); ?>
                         -
-                        <?= $this->Form->postLink('Supprimer', array('action' => 'delete', $pet['Pet']['id']), array(), 'Voulez vous vraiment supprimer ?'); ?>
+                        <?= $this->Form->postLink('Supprimer', array('action' => 'delete', $pet->id), array(), 'Voulez vous vraiment supprimer ?'); ?>
                         </td>
                     </tr>
                 <?php endforeach ?>
