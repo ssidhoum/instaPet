@@ -112,4 +112,11 @@ class PetsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    public function my(){
+        $pets = $this->Pets->find('all', array(
+            'conditions' => array('Pets.user_id' => $this->Auth->user("id")),
+        ));
+        $this->set(compact('pets'));
+    }
+
 }
