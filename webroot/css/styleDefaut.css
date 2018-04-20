@@ -1,0 +1,95 @@
+*{
+    color: #222;
+    cursor: auto;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav{
+	display: flex;
+}
+
+ul{
+	display: flex;
+	list-style: none;
+}
+
+li {
+    padding-left: 1.8em;
+    padding-top: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+h1{
+	font-size: 20px;   
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size: 15px;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+.listnav{
+	width: 60%;
+	background-color: #D9F489;
+}
+
+.formConnexionMenu{
+	width: 40%;
+}
+
+.containerHome{
+	width: 100%;
+}
+
+.container{
+	display: flex;
+	width: 100%;
+}
+
+.menuAccount{
+	width: 40%;
+}
+
+.navAccount{
+	display: block;
+}
+
+footer{
+	background-color: #D95858;
+	display: flex;
+	height: 50px;
+}
+
+a{
+	cursor: pointer;
+}
+
+.forminput{
+	background-color: yellow;
+	padding: 0.2em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+button {
+	font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+	text-transform: uppercase;
+	padding: 0.8em;
+	margin-top: 1.9em;
+	margin-bottom: 1.9em;
+}
+
+.active{
+	background-color: yellow;
+}

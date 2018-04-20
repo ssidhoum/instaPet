@@ -1,0 +1,89 @@
+.containerHome{
+	display: flex;
+}
+
+.containerAccount, .containerPet{
+	text-align: center;
+	width: 60%;
+	background-color: #D9F489;
+
+}
+.greenHome {
+	width: 60%;
+	background-color: #D9F489;
+}
+
+.whiteHome{
+	width: 40%;
+	text-align: center;
+}
+
+.form{
+	padding: 20%;
+}
+
+.icones{
+	display: flex;
+}
+
+.instaIcon, .fbIcon{
+	display: flex;
+	width: 50%;
+}
+
+.iconDeco{
+	width: 100px;
+	height: 100px;
+}
+.picturePet{
+	padding: 0;
+	width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 1px #d95858;
+}
+.h1Home{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+.quoteHome{
+	font-family: 'Cormorant Garamond', serif;
+}
+
+.logo{
+	padding: 1%;
+}
+
+.containerInfo{
+	display: flex;
+}
+
+.pictureProfil{
+	width: 120px;
+    height: 120px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 1px #d95858;
+    margin-right: 0.9em;
+    margin-left: 0.9em;
+}
+
+.infoProfil{
+	text-align: left;
+	padding-top: 0.9em;
+	padding-bottom: 0.9em;
+}
+
+table{
+	padding-top: 1.8em;
+}
+
+td{
+	padding:0.9em;
+}
