@@ -51,7 +51,11 @@ class PetsTable extends Table
             'joinType' => 'INNER'
         ]); 
 
-        $this->belongsToMany('Posts'); 
+        $this->belongsToMany('Posts', [
+            'foreignKey' => 'pet_id',
+            'targetForeignKey' => 'post_id',
+            'joinTable' => 'pets_posts'
+        ]);
 
 
         $this->addBehavior('Josegonzalez/Upload.Upload', [

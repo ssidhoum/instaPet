@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Model\Entity;
-
 use Cake\ORM\Entity;
 use Cake\Collection\Collection;
 
-class Post extends Entity
-{
+class Post extends Entity{
+
     protected $_accessible = [
         'name' => true,
         'content' => true,
@@ -14,8 +13,6 @@ class Post extends Entity
         'user_id' => true,
         'photo' => true,
         'photo_dir'=>true
-
     ];
-
-
+    
 }

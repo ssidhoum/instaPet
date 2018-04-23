@@ -39,6 +39,7 @@ class Pet extends Entity
         'species' => true,
         'user' => true,
         'photo' => true,
-        'photo_dir' => true
+        'photo_dir' => true,
+
     ];
 }
