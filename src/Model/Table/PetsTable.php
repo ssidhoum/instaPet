@@ -41,6 +41,10 @@ class PetsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('Posts', [
+            'foreignKey'=>'pet_id'
+        ]);
+
         $this->belongsTo('Species', [
             'foreignKey' => 'species_id',
             'joinType' => 'INNER'
@@ -51,11 +55,11 @@ class PetsTable extends Table
             'joinType' => 'INNER'
         ]); 
 
-        $this->belongsToMany('Posts', [
+        /**$this->belongsToMany('Posts', [
             'foreignKey' => 'pet_id',
             'targetForeignKey' => 'post_id',
             'joinTable' => 'pets_posts'
-        ]);
+        ]);**/
 
 
         $this->addBehavior('Josegonzalez/Upload.Upload', [

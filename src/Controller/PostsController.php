@@ -12,7 +12,7 @@ class PostsController extends AppController
     public function initialize(){   
         parent::initialize();
         // Ajoute l'action 'add' à la liste des actions autorisées.
-        $this->Auth->allow(['my','edit']);
+        $this->Auth->allow(['my','edit', 'add', 'pet', 'index']);
     }
 
     public function my(){
@@ -27,9 +27,10 @@ class PostsController extends AppController
 
         $post = $this->Posts->newEntity();
         if ($this->request->is('post')) {
-            $post = $this->Posts->patchEntity($post, $this->request->getData());
-            
-            if ($this->Posts->save($post)) {
+            $post = $this->Posts->patchEntity($post, $this->request->getData(), ['associated' => ['Pets']] );
+
+            if ($this->Posts->save($post)){
+
                 $this->Flash->success(__('Votre inscription a réussi :D :D .'));
 
                 return $this->redirect(['action' => 'my']);
@@ -38,4 +39,15 @@ class PostsController extends AppController
         }
         $this->set(compact('pets','post'));
     }
+
+    public function pet($id){
+    $user = $this->Posts->get($id, [
+            'contain' => ['Pets'],
+
+    ]);
+
+        $this->set('user', $user);
+
+    }
+
 }

@@ -9,7 +9,7 @@
         <h1>
             Mes photos
         </h1>
-        <?= $this->Html->link('Ajouter une photo', array('controller' => 'posts', 'action' => 'edit')); ?>
+        <?= $this->Html->link('Ajouter une photo', array('controller' => 'posts', 'action' => 'add')); ?>
     </div>
     <div class="menuAccount">
         <ul class="navAccount">

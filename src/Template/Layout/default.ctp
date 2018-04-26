@@ -28,7 +28,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('styleDefaut.css') ?>
-    <?= $this->Html->css('homeStyle.css') ?>
+    <?= $this->Html->css('styleHome.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

@@ -12,7 +12,8 @@ class Post extends Entity{
         'created' => true,
         'user_id' => true,
         'photo' => true,
-        'photo_dir'=>true
+        'photo_dir'=>true,
+        'pet_id'=>true
     ];
     
 }

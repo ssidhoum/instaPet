@@ -13,7 +13,7 @@ class PostsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsToMany('Pets');
+
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => [
                'fields' => [
@@ -21,6 +21,17 @@ class PostsTable extends Table
                ],
                 'path'=>'webroot{DS}img{DS}files{DS}{model}{DS}{field}{DS}',
            ],
-       ]);  
+       ]); 
+
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
+
+        /*$this->belongsToMany('Pets', [
+            'foreignKey' => 'post_id',
+            'targetForeignKey' => 'pet_id',
+            'joinTable' => 'pets_posts'
+        ]);*/
     }
 }

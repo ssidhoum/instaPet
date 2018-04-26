@@ -49,7 +49,7 @@
                             ?> Ans
                         </td>
                         <td>
-                        <?= $this->Html->link('Voir les photos', array('controller' => 'posts', 'action' => 'pet', $pet->id)); ?>
+                        <?= $this->Html->link('Voir les photos', array('action' => 'pet', $pet->id), array(), 'Voulez vous vraiment supprimer ?'); ?>, 
                         -
                         <?= $this->Html->link('Editer', array('action' => 'edit', $pet->id)); ?>
                         -

@@ -16,7 +16,8 @@
             echo $this->Form->control('name', ['label'=>'Titre photo:']);
             echo $this->Form->control('photo',['type' => 'file', 'label'=>'Photo:']);
             echo $this->Form->control('content', ['label'=>'légende:']);
-            echo $this->Form->control('pet_id', ['label'=>'Taguer animal:', 'multiple']);
+            echo $this->Form->control('pet_id', ['options' => $pets,'label'=>'Taguer animal:', 'multiple' ]);
+
         ?>
     </fieldset>
     <?= $this->Form->button(__('Poster')) ?>

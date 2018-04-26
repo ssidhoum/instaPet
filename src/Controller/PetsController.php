@@ -15,7 +15,7 @@ class PetsController extends AppController
 
     public function initialize(){   
         parent::initialize();
-        $this->Auth->allow(['my', 'add', 'edit', 'delete']);
+        $this->Auth->allow(['my', 'add', 'edit', 'delete', 'pet']);
     }
 
     /**
@@ -118,5 +118,17 @@ class PetsController extends AppController
         ));
         $this->set(compact('pets'));
     }
+
+    public function pet($id = null)
+    {
+
+        $pet = $this->Pets->get($id, [
+            'contain' => ['Posts']
+        ]);
+
+
+        $this->set('pet', $pet, $id);
+    }
+
 
 }
