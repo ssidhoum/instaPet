@@ -45,6 +45,7 @@
                         echo $this->Html->image($url, [
                             'height' => '120',
                             'width' => '120',
+                            'url' => ['controller' => 'posts', 'action' => 'view', h($posts->id)]
                         ]);?>
                     </td>
                 </tr> 

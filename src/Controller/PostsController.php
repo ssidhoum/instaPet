@@ -12,13 +12,12 @@ class PostsController extends AppController
     public function initialize(){   
         parent::initialize();
         // Ajoute l'action 'add' à la liste des actions autorisées.
-        $this->Auth->allow(['my','edit', 'add', 'pet', 'index']);
+        $this->Auth->allow(['my','edit', 'view']);
     }
 
     public function my(){
 
     }
-
 
     public function edit(){
         $pets=$this->Posts->Pets->find('list', array(
@@ -40,14 +39,9 @@ class PostsController extends AppController
         $this->set(compact('pets','post'));
     }
 
-    public function pet($id){
-    $user = $this->Posts->get($id, [
-            'contain' => ['Pets'],
-
-    ]);
-
-        $this->set('user', $user);
-
+    public function view($id=null)
+    {
+        $post = $this->Posts->get($id);
+        $this->set('post', $post);
     }
-
 }
